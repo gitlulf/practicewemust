@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2ffafc0a-ff6d-41bc-bcc5-0ea7fe0daf4e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/de/lulf/practicewemust/helloworld/HelloWorld.java" afterDir="false" />
+    <list default="true" id="2ffafc0a-ff6d-41bc-bcc5-0ea7fe0daf4e" name="Default Changelist" comment="HelloWorld">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/de/lulf/practicewemust/helloworld/TestHelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/lulf/practicewemust/helloworld/TestHelloWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/Feld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/Feld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/FeldNichtAufBrettException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/FeldNichtAufBrettException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/FeldZustand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/FeldZustand.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/Schiff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/Schiff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/Spiel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/Spiel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/Spielbrett.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/Spielbrett.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/Spielcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/Spielcontroller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/schiffeversenken/TestFeld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/schiffeversenken/TestFeld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/schiffeversenken/TestSpielBrett.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/schiffeversenken/TestSpielBrett.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/de/lulf/practicewemust/helloworld/HelloWorld.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +27,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -31,6 +40,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/java" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -39,6 +49,18 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="de.lulf.practicewemust.helloworld" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="de.lulf.practicewmust.schiffeversenken" />
+      <recent name="de.lulf.practicewemust.helloworld" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\de\lulf\practicewemust\src\test\java" />
+    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
@@ -57,18 +79,81 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="TestHelloWorld.test1plus1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestSpielBrett">
+    <configuration name="TestSpielBrett" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="practicewemust" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="de.lulf.practicewemust.helloworld.*" />
+          <option name="PATTERN" value="schiffeversenken.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="de.lulf.practicewemust.helloworld" />
-      <option name="MAIN_CLASS_NAME" value="de.lulf.practicewemust.helloworld.TestHelloWorld" />
-      <option name="METHOD_NAME" value="test1plus1" />
+      <option name="PACKAGE_NAME" value="schiffeversenken" />
+      <option name="MAIN_CLASS_NAME" value="schiffeversenken.TestSpielBrett" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestSpielBrett.schiffRagtUntenAusSpielfeld" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="practicewemust" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="schiffeversenken.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="schiffeversenken" />
+      <option name="MAIN_CLASS_NAME" value="schiffeversenken.TestSpielBrett" />
+      <option name="METHOD_NAME" value="schiffRagtUntenAusSpielfeld" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestSpielBrett.schiffSetzen001" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="practicewemust" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="schiffeversenken.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="schiffeversenken" />
+      <option name="MAIN_CLASS_NAME" value="schiffeversenken.TestSpielBrett" />
+      <option name="METHOD_NAME" value="schiffSetzen001" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestSpielBrett.schiffSetzen002" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="practicewemust" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="schiffeversenken.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="schiffeversenken" />
+      <option name="MAIN_CLASS_NAME" value="schiffeversenken.TestSpielBrett" />
+      <option name="METHOD_NAME" value="schiffSetzen002" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestSpielBrett.testGetFeldException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="practicewemust" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="schiffeversenken.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="schiffeversenken" />
+      <option name="MAIN_CLASS_NAME" value="schiffeversenken.TestSpielBrett" />
+      <option name="METHOD_NAME" value="testGetFeldException" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -76,7 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestHelloWorld.test1plus1" />
+        <item itemvalue="JUnit.TestSpielBrett" />
+        <item itemvalue="JUnit.TestSpielBrett.schiffSetzen002" />
+        <item itemvalue="JUnit.TestSpielBrett.schiffSetzen001" />
+        <item itemvalue="JUnit.TestSpielBrett.schiffRagtUntenAusSpielfeld" />
+        <item itemvalue="JUnit.TestSpielBrett.testGetFeldException" />
       </list>
     </recent_temporary>
   </component>
@@ -90,7 +179,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1572467082585</updated>
-      <workItem from="1572467087140" duration="3586000" />
+      <workItem from="1572467087140" duration="4929000" />
+      <workItem from="1572604592946" duration="4632000" />
+      <workItem from="1572764078776" duration="2050000" />
+      <workItem from="1572807133246" duration="8260000" />
     </task>
     <task id="LOCAL-00001" summary="HelloWorld">
       <created>1572470603108</created>
@@ -110,7 +202,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
