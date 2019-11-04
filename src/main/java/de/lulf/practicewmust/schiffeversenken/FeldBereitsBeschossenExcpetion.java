@@ -1,6 +1,10 @@
 package de.lulf.practicewmust.schiffeversenken;
 
-public class FeldBereitsBeschossenExcpetion extends Throwable {
-    public FeldBereitsBeschossenExcpetion(String s) {
+/**
+ * Wird geworfen beim Versuch, ein bereits beschossenes Feld noch einmal zu beschieﬂen.
+ */
+public class FeldBereitsBeschossenExcpetion extends Exception {
+    public FeldBereitsBeschossenExcpetion(String message) {
+        super (message);
     }
 }

@@ -73,5 +73,88 @@ public class Spielbrett {
         throw new FeldNichtAufBrettException("Feld mit den Koordinaten " + x + "/" + y + " existiert nicht auf dem Spielbrett.");
     }
 
+    /**
+     * Verarbeitet einen Schuss auf das Brett
+     * @param x x-Koordinate des Schusses
+     * @param y y-Korrdinate des Schusses
+     * @return true bei einem Treffer, sonst false
+     */
+    public boolean processSchuss(int x, int y) throws FeldNichtAufBrettException, FeldBereitsBeschossenExcpetion {
+        Feld feld = getFeld(x,y);
+        if (FeldZustand.SCHIFF.equals(feld.getZustand())) {
+            feld.setZustand(FeldZustand.SCHUSSTREFFER);
+            return true;
+        } else if (FeldZustand.WASSER.equals(feld.getZustand())) {
+            feld.setZustand(FeldZustand.SCHUSSWASSER);
+            return false;
+        } else {
+            throw new FeldBereitsBeschossenExcpetion("Das Feld " + x + ", " + y + " ist bereits beschossen worden.");
+        }
+    }
 
+    /**
+     *
+     * @return eine String-Repräsention des Spielbrettes mit den Zuständen der Felder
+     */
+    public String toString() {
+        return toStringFlexibel(false);
+    }
+
+    /**
+     *
+     * @return eine String-Repräsentation des Spielbrettes mit den Zuständen der bereits beschossenen Felder. Die
+     * noch nicht beschossenen Felder werden als '?' dargestellt.
+     */
+    public String toStringCovered() {
+        return toStringFlexibel(true);
+    }
+
+    /**
+     *
+     * @param covered wenn ja, sind die noch nicht beschossenen Felder mit einem '?' verdeckt, die beschossenen nicht
+     * @return Eine String-Repräsentation des Spielbretts, je nach Parameter 'covered' mit oder ohne abgedeckten Feldern
+     */
+    private String toStringFlexibel(boolean covered) {
+        String theString = "";
+        int currentX = 0;
+        for (Feld feld : felder) {
+            if (currentX < feld.getX()) {
+                theString = theString + "\n";
+            }
+            currentX = feld.getX();
+            theString = theString + uebersetzeZustand(feld.getZustand(), covered) + " ";
+        }
+        theString = theString + "\n";
+        return theString;
+    }
+
+    /**
+     * Übersetzt den Zustand der Felder in eine String-Repräsentation
+     * @param f der Feldzustand, der übersetzt werden soll
+     * @param covered wenn ja, sind die noch nicht beschossenen Felder durch ein '? ersetzt, sonst nicht.
+     * @return den String, der den Feldzustand repräsentiert.
+     */
+    private String uebersetzeZustand(FeldZustand f, boolean covered) {
+        if (FeldZustand.SCHUSSWASSER.equals(f)) {
+            return "0";
+        }
+        if (FeldZustand.SCHUSSTREFFER.equals(f)) {
+            return "X";
+        }
+        if (FeldZustand.WASSER.equals(f)) {
+            if (covered) {
+                return "?";
+            } else {
+                return "W";
+            }
+        }
+        if (FeldZustand.SCHIFF.equals(f)) {
+            if (covered) {
+                return "?";
+            } else {
+                return "S";
+            }
+        }
+        return "?";
+    }
 }

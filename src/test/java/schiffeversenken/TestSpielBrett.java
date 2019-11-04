@@ -1,9 +1,6 @@
 package schiffeversenken;
 
-import de.lulf.practicewmust.schiffeversenken.Feld;
-import de.lulf.practicewmust.schiffeversenken.FeldNichtAufBrettException;
-import de.lulf.practicewmust.schiffeversenken.Schiff;
-import de.lulf.practicewmust.schiffeversenken.Spielbrett;
+import de.lulf.practicewmust.schiffeversenken.*;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -46,21 +43,21 @@ public class TestSpielBrett {
     }
 
     @Test(expected = FeldNichtAufBrettException.class)
-    public void schiffRagtRechtsAusSpielfeld() throws FeldNichtAufBrettException{
+    public void testSchiffRagtRechtsAusSpielfeld() throws FeldNichtAufBrettException{
         Spielbrett brett = new Spielbrett();
         brett.init(3, 3);
         brett.setzeSchiff(3, 1, 2, true);
     }
 
     @Test(expected = FeldNichtAufBrettException.class)
-    public void schiffRagtUntenAusSpielfeld() throws FeldNichtAufBrettException {
+    public void testSchiffRagtUntenAusSpielfeld() throws FeldNichtAufBrettException {
         Spielbrett brett = new Spielbrett();
         brett.init(3, 3);
         brett.setzeSchiff(3, 1, 2, false);
     }
 
     @Test
-    public void schiffSetzen001() throws FeldNichtAufBrettException {
+    public void testSchiffSetzen001() throws FeldNichtAufBrettException {
         Spielbrett brett = new Spielbrett();
         brett.init(10, 10);
         Schiff schiff = brett.setzeSchiff(3, 2, 2, true);
@@ -76,7 +73,7 @@ public class TestSpielBrett {
     }
 
     @Test
-    public void schiffSetzen002() throws FeldNichtAufBrettException {
+    public void testSchiffSetzen002() throws FeldNichtAufBrettException {
         Spielbrett brett = new Spielbrett();
         brett.init(10, 10);
         Schiff schiff = brett.setzeSchiff(3, 2, 2, false);
@@ -90,6 +87,96 @@ public class TestSpielBrett {
         Assert.assertEquals(2, felder.get(2).getX());
         Assert.assertEquals(4, felder.get(2).getY());
     }
+
+    @Test(expected = FeldNichtAufBrettException.class)
+    public void testSchussAusserhalbSpielfeld() throws FeldNichtAufBrettException, FeldBereitsBeschossenExcpetion {
+        Spielbrett brett = new Spielbrett();
+        brett.init(10, 10);
+        brett.processSchuss(10, 11);
+    }
+
+    @Test
+    public void testSchussWasser() throws FeldNichtAufBrettException, FeldBereitsBeschossenExcpetion {
+        Spielbrett brett = new Spielbrett();
+        brett.init(10, 10);
+        Assert.assertEquals(FeldZustand.WASSER, brett.getFeld(3, 4).getZustand());
+        boolean result = brett.processSchuss(3, 4);
+        Assert.assertFalse(result);
+        Assert.assertEquals(FeldZustand.SCHUSSWASSER, brett.getFeld(3, 4).getZustand());
+    }
+
+    @Test
+    public void testSchussTreffer() throws FeldNichtAufBrettException, FeldBereitsBeschossenExcpetion {
+        Spielbrett brett = new Spielbrett();
+        brett.init(10, 10);
+        brett.getFeld(3,4).setZustand(FeldZustand.SCHIFF);
+        Assert.assertEquals(FeldZustand.SCHIFF, brett.getFeld(3, 4).getZustand());
+        boolean result = brett.processSchuss(3, 4);
+        Assert.assertTrue(result);
+        Assert.assertEquals(FeldZustand.SCHUSSTREFFER, brett.getFeld(3, 4).getZustand());
+    }
+
+    @Test(expected = FeldBereitsBeschossenExcpetion.class)
+    public void testSchussTrefferZweimal() throws FeldNichtAufBrettException, FeldBereitsBeschossenExcpetion {
+        Spielbrett brett = new Spielbrett();
+        brett.init(10, 10);
+        brett.getFeld(3,4).setZustand(FeldZustand.SCHUSSTREFFER);
+        brett.processSchuss(3,4);
+    }
+
+    @Test(expected = FeldBereitsBeschossenExcpetion.class)
+    public void testSchussWasserZweimal() throws FeldNichtAufBrettException, FeldBereitsBeschossenExcpetion {
+        Spielbrett brett = new Spielbrett();
+        brett.init(10, 10);
+        brett.getFeld(3,4).setZustand(FeldZustand.SCHUSSWASSER);
+        brett.processSchuss(3,4);
+    }
+
+    @Test
+    public void testToString() throws FeldNichtAufBrettException {
+        Spielbrett brett = new Spielbrett();
+        brett.init(10, 10);
+        brett.getFeld(1, 0).setZustand(FeldZustand.SCHIFF);
+        brett.getFeld(1, 1).setZustand(FeldZustand.SCHUSSWASSER);
+        brett.getFeld(1, 2).setZustand(FeldZustand.SCHUSSTREFFER);
+        String string = brett.toString();
+        String assertString =
+                "W W W W W W W W W W " + "\n" +
+                "S 0 X W W W W W W W " + "\n" +
+                "W W W W W W W W W W " + "\n" +
+                "W W W W W W W W W W " + "\n" +
+                "W W W W W W W W W W " + "\n" +
+                "W W W W W W W W W W " + "\n" +
+                "W W W W W W W W W W " + "\n" +
+                "W W W W W W W W W W " + "\n" +
+                "W W W W W W W W W W " + "\n" +
+                "W W W W W W W W W W " + "\n";
+        Assert.assertEquals(assertString, string);
+    }
+
+    @Test
+    public void testToStringCovered() throws FeldNichtAufBrettException {
+        Spielbrett brett = new Spielbrett();
+        brett.init(10, 10);
+        brett.getFeld(1, 0).setZustand(FeldZustand.SCHIFF);
+        brett.getFeld(1, 1).setZustand(FeldZustand.SCHUSSWASSER);
+        brett.getFeld(1, 2).setZustand(FeldZustand.SCHUSSTREFFER);
+        String string = brett.toStringCovered();
+        String assertString =
+                "? ? ? ? ? ? ? ? ? ? " + "\n" +
+                "? 0 X ? ? ? ? ? ? ? " + "\n" +
+                "? ? ? ? ? ? ? ? ? ? " + "\n" +
+                "? ? ? ? ? ? ? ? ? ? " + "\n" +
+                "? ? ? ? ? ? ? ? ? ? " + "\n" +
+                "? ? ? ? ? ? ? ? ? ? " + "\n" +
+                "? ? ? ? ? ? ? ? ? ? " + "\n" +
+                "? ? ? ? ? ? ? ? ? ? " + "\n" +
+                "? ? ? ? ? ? ? ? ? ? " + "\n" +
+                "? ? ? ? ? ? ? ? ? ? " + "\n";
+        System.out.println(assertString);
+        Assert.assertEquals(assertString, string);
+    }
+
 
 
 

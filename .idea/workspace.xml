@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2ffafc0a-ff6d-41bc-bcc5-0ea7fe0daf4e" name="Default Changelist" comment="HelloWorld">
+    <list default="true" id="2ffafc0a-ff6d-41bc-bcc5-0ea7fe0daf4e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/FeldBereitsBeschossenExcpetion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/Feld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/Feld.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/FeldNichtAufBrettException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/FeldNichtAufBrettException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/FeldZustand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/FeldZustand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/Schiff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/Schiff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/Spiel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/Spiel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/Spielbrett.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/Spielbrett.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/Spielcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/Spielcontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/schiffeversenken/TestFeld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/schiffeversenken/TestFeld.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/schiffeversenken/TestSpielBrett.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/schiffeversenken/TestSpielBrett.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/de/lulf/practicewemust/helloworld/HelloWorld.class" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Enum" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -54,12 +47,12 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="de.lulf.practicewemust.helloworld" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\de\lulf\practicewemust\src\test\java" />
+    </key>
     <key name="CreateClassDialog.RecentsKey">
       <recent name="de.lulf.practicewmust.schiffeversenken" />
       <recent name="de.lulf.practicewemust.helloworld" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\de\lulf\practicewemust\src\test\java" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -95,7 +88,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestSpielBrett.schiffRagtUntenAusSpielfeld" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestSpielBrett.testSchussTreffer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="practicewemust" />
       <extension name="coverage">
         <pattern>
@@ -105,13 +98,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="schiffeversenken" />
       <option name="MAIN_CLASS_NAME" value="schiffeversenken.TestSpielBrett" />
-      <option name="METHOD_NAME" value="schiffRagtUntenAusSpielfeld" />
+      <option name="METHOD_NAME" value="testSchussTreffer" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestSpielBrett.schiffSetzen001" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestSpielBrett.testSchussWasser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="practicewemust" />
       <extension name="coverage">
         <pattern>
@@ -121,13 +114,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="schiffeversenken" />
       <option name="MAIN_CLASS_NAME" value="schiffeversenken.TestSpielBrett" />
-      <option name="METHOD_NAME" value="schiffSetzen001" />
+      <option name="METHOD_NAME" value="testSchussWasser" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestSpielBrett.schiffSetzen002" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestSpielBrett.testToString" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="practicewemust" />
       <extension name="coverage">
         <pattern>
@@ -137,13 +130,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="schiffeversenken" />
       <option name="MAIN_CLASS_NAME" value="schiffeversenken.TestSpielBrett" />
-      <option name="METHOD_NAME" value="schiffSetzen002" />
+      <option name="METHOD_NAME" value="testToString" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestSpielBrett.testGetFeldException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestSpielBrett.testToStringCovered" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="practicewemust" />
       <extension name="coverage">
         <pattern>
@@ -153,7 +146,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="schiffeversenken" />
       <option name="MAIN_CLASS_NAME" value="schiffeversenken.TestSpielBrett" />
-      <option name="METHOD_NAME" value="testGetFeldException" />
+      <option name="METHOD_NAME" value="testToStringCovered" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -162,10 +155,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.TestSpielBrett" />
-        <item itemvalue="JUnit.TestSpielBrett.schiffSetzen002" />
-        <item itemvalue="JUnit.TestSpielBrett.schiffSetzen001" />
-        <item itemvalue="JUnit.TestSpielBrett.schiffRagtUntenAusSpielfeld" />
-        <item itemvalue="JUnit.TestSpielBrett.testGetFeldException" />
+        <item itemvalue="JUnit.TestSpielBrett.testToStringCovered" />
+        <item itemvalue="JUnit.TestSpielBrett.testToString" />
+        <item itemvalue="JUnit.TestSpielBrett.testSchussTreffer" />
+        <item itemvalue="JUnit.TestSpielBrett.testSchussWasser" />
       </list>
     </recent_temporary>
   </component>
@@ -182,7 +175,8 @@
       <workItem from="1572467087140" duration="4929000" />
       <workItem from="1572604592946" duration="4632000" />
       <workItem from="1572764078776" duration="2050000" />
-      <workItem from="1572807133246" duration="8260000" />
+      <workItem from="1572807133246" duration="8395000" />
+      <workItem from="1572897263630" duration="5920000" />
     </task>
     <task id="LOCAL-00001" summary="HelloWorld">
       <created>1572470603108</created>
@@ -191,7 +185,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572470603108</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Feld und Spielbrett">
+      <created>1572816692427</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1572816692427</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +213,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="HelloWorld" />
-    <option name="LAST_COMMIT_MESSAGE" value="HelloWorld" />
+    <MESSAGE value="Feld und Spielbrett" />
+    <option name="LAST_COMMIT_MESSAGE" value="Feld und Spielbrett" />
   </component>
 </project>
