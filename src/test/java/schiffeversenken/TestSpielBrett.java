@@ -43,21 +43,21 @@ public class TestSpielBrett {
     }
 
     @Test(expected = FeldNichtAufBrettException.class)
-    public void testSchiffRagtRechtsAusSpielfeld() throws FeldNichtAufBrettException{
+    public void testSchiffRagtRechtsAusSpielfeld() throws FeldNichtAufBrettException, SchiffeUeberlappenSichException {
         Spielbrett brett = new Spielbrett();
         brett.init(3, 3);
         brett.setzeSchiff(3, 1, 2, true);
     }
 
     @Test(expected = FeldNichtAufBrettException.class)
-    public void testSchiffRagtUntenAusSpielfeld() throws FeldNichtAufBrettException {
+    public void testSchiffRagtUntenAusSpielfeld() throws FeldNichtAufBrettException, SchiffeUeberlappenSichException {
         Spielbrett brett = new Spielbrett();
         brett.init(3, 3);
         brett.setzeSchiff(3, 1, 2, false);
     }
 
     @Test
-    public void testSchiffSetzen001() throws FeldNichtAufBrettException {
+    public void testSchiffSetzen001() throws FeldNichtAufBrettException, SchiffeUeberlappenSichException {
         Spielbrett brett = new Spielbrett();
         brett.init(10, 10);
         Schiff schiff = brett.setzeSchiff(3, 2, 2, true);
@@ -73,7 +73,7 @@ public class TestSpielBrett {
     }
 
     @Test
-    public void testSchiffSetzen002() throws FeldNichtAufBrettException {
+    public void testSchiffSetzen002() throws FeldNichtAufBrettException, SchiffeUeberlappenSichException {
         Spielbrett brett = new Spielbrett();
         brett.init(10, 10);
         Schiff schiff = brett.setzeSchiff(3, 2, 2, false);

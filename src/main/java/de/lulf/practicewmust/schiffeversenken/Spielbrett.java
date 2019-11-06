@@ -34,7 +34,8 @@ public class Spielbrett {
      * @return Das Schiff auf dem Spielbrett
      * @throws FeldNichtAufBrettException wenn das Schiff über das Spielfeld hinausragt
      */
-    public Schiff setzeSchiff(int laenge, int xStart, int yStart, boolean horizontal) throws FeldNichtAufBrettException {
+    public Schiff setzeSchiff(int laenge, int xStart, int yStart, boolean horizontal)
+            throws FeldNichtAufBrettException, SchiffeUeberlappenSichException {
         ArrayList<Feld> felderMitNeuemSchiff = new ArrayList<Feld>();
         try {
             for(int i = 0; i < laenge; i++) {
