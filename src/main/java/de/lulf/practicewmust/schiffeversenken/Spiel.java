@@ -40,4 +40,12 @@ public class Spiel {
     public void setSpieler2(Spieler spieler2) {
         this.spieler2 = spieler2;
     }
+
+    public void setBrett1(Spielbrett brett1) {
+        this.brett1 = brett1;
+    }
+
+    public void setBrett2(Spielbrett brett2) {
+        this.brett2 = brett2;
+    }
 }

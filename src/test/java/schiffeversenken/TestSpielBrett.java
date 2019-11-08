@@ -95,6 +95,14 @@ public class TestSpielBrett {
         brett.processSchuss(10, 11);
     }
 
+    @Test(expected = SchiffeUeberlappenSichException.class)
+    public void testSchSchiffeUeberlappenSich() throws SchiffeUeberlappenSichException, FeldNichtAufBrettException {
+        Spielbrett brett = new Spielbrett();
+        brett.init(10, 10);
+        brett.getFeld(4,4).setZustand(FeldZustand.SCHIFF);
+        brett.setzeSchiff(2,3, 4, true);
+    }
+
     @Test
     public void testSchussWasser() throws FeldNichtAufBrettException, FeldBereitsBeschossenExcpetion {
         Spielbrett brett = new Spielbrett();
