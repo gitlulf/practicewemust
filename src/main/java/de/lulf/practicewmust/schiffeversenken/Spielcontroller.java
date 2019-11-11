@@ -78,19 +78,19 @@ public class Spielcontroller {
         Spieler currentSpieler;
         if (Integer.valueOf(1).equals(schuetze)) {
             currentBrett = spiel.getBrett2();
-            currentSpieler = spiel.getSpieler2();
+            currentSpieler = spiel.getSpieler1();
         } else if (Integer.valueOf(2).equals(schuetze)) {
             currentBrett = spiel.getBrett1();
-            currentSpieler = spiel.getSpieler1();
+            currentSpieler = spiel.getSpieler2();
         } else {
             throw new IllegalArgumentException("nur 1 oder 2 ist gültig.");
         }
         System.out.println(currentSpieler.getName() + ", zum Schuss bitte. Zunächst die x-Koordinate, dann die y-Koordinate:");
         while (true) {
-            int xx = readNumberFromCommandLine();
-            int yy = readNumberFromCommandLine();
+            int x = readNumberFromCommandLine();
+            int y = readNumberFromCommandLine();
             try {
-                if (currentBrett.processSchuss(xx, yy)) {
+                if (currentBrett.processSchuss(y-1, x-1)) {
                     System.out.println("Treffer!");
                 } else {
                     System.out.println("Wasser");
@@ -114,14 +114,14 @@ public class Spielcontroller {
             int current = schiffsgroessen[i];
             System.out.println(spieler1.getName() + ": Dein Spielfeld sieht momentan so aus: ");
             System.out.println(brett1.toString());
-            System.out.println("Wo soll Dein Schiff mit der Größe " + current + " sein? Bitte gib die y-Koordinate ein.");
-            int sy = readNumberFromCommandLine()-1;
-            System.out.println("Bitte gib die x-Koordinate ein:");
-            int sx = readNumberFromCommandLine()-1;
+            System.out.println("Wo soll Dein Schiff mit der Größe " + current + " sein? Bitte gib die x-Koordinate ein.");
+            int ssx = readNumberFromCommandLine()-1;
+            System.out.println("Bitte gib die y-Koordinate ein:");
+            int ssy = readNumberFromCommandLine()-1;
             System.out.println("Schwimmt das Schiff horizontal (h) oder vertikal (v)");
             String vertical = readStringFromCommandLine("h", "v");
             try {
-                schiffe.add(brett1.setzeSchiff(current, sy, sx, "v".equals(vertical)));
+                schiffe.add(brett1.setzeSchiff(current, ssy, ssx, "v".equals(vertical)));
             } catch (FeldNichtAufBrettException e) {
                 System.out.println("Das Schiff ragt über den Spielfeldrand hinaus. Bitte nochmal setzen.");
                 i--;

@@ -26,15 +26,39 @@ public class Spielbrett {
     }
 
     /**
-     * Setzt ein Schiff auf das Spielfeld
+     * Prüft, ob das Setzen für jedes Feld möglich wäre. Wenn das möglich ist, setzt das
+     * Schiff auf das Spielfeld
      * @param laenge Länge des Schiffs
      * @param xStart Startpunkt in x- Koordinate
      * @param yStart Startpunkt y Koordinate
      * @param vertical vertical oder nicht (vertikal)
      * @return Das Schiff auf dem Spielbrett
      * @throws FeldNichtAufBrettException wenn das Schiff über das Spielfeld hinausragt
+     * @throws SchiffeUeberlappenSichException wenn sich das SChiff mit einem bestehenden Schiff überlappt.
      */
     public Schiff setzeSchiff(int laenge, int xStart, int yStart, boolean vertical)
+            throws FeldNichtAufBrettException, SchiffeUeberlappenSichException {
+        try {
+            setzeSchiff(laenge, xStart, yStart, vertical, true) ;
+        } catch(SchiffeUeberlappenSichException sex) {
+            return null;
+        }
+        return setzeSchiff(laenge, xStart, yStart, vertical, false) ;
+    }
+
+
+    /**
+     * Setzt ein Schiff auf das Spielfeld
+     * @param laenge Länge des Schiffs
+     * @param xStart Startpunkt in x- Koordinate
+     * @param yStart Startpunkt y Koordinate
+     * @param vertical vertical oder nicht (vertikal)
+     * @param checkonly ob die Funktion nur prüft, ob das Setzen erlaubt ist.
+     * @return Das Schiff auf dem Spielbrett
+     * @throws FeldNichtAufBrettException wenn das Schiff über das Spielfeld hinausragt
+     * @throws SchiffeUeberlappenSichException wenn sich das SChiff mit einem bestehenden Schiff überlappt.
+     */
+    private Schiff setzeSchiff(int laenge, int xStart, int yStart, boolean vertical, boolean checkonly)
             throws FeldNichtAufBrettException, SchiffeUeberlappenSichException {
         ArrayList<Feld> felderMitNeuemSchiff = new ArrayList<Feld>();
         try {
@@ -53,10 +77,12 @@ public class Spielbrett {
         Schiff schiff = new Schiff(laenge);
         for (Feld currentFeld : felderMitNeuemSchiff) {
             if (FeldZustand.SCHIFF.equals(currentFeld.getZustand())) {
-                throw new SchiffeUeberlappenSichException("Ein Feld soll auf 'Schiff gesetzt werden' wo bereits 'Schiff' ist");
+                throw new SchiffeUeberlappenSichException("Ein Feld soll auf 'Schiff' gesetzt werden wo bereits 'Schiff' ist");
             }
-            currentFeld.setZustand(FeldZustand.SCHIFF);
-            schiff.addFeld(currentFeld);
+            if (!checkonly) {
+                currentFeld.setZustand(FeldZustand.SCHIFF);
+                schiff.addFeld(currentFeld);
+            }
         }
         return schiff;
     }

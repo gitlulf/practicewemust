@@ -104,6 +104,20 @@ public class TestSpielBrett {
     }
 
     @Test
+    public void testSchSchiffeUeberlappenSichSetzenFailed() throws FeldNichtAufBrettException {
+        Spielbrett brett = new Spielbrett();
+        brett.init(10, 10);
+        brett.getFeld(4,4).setZustand(FeldZustand.SCHIFF);
+        try {
+            brett.setzeSchiff(2,3, 4, true);
+        } catch (FeldNichtAufBrettException e) {
+        } catch (SchiffeUeberlappenSichException e) {
+        }
+        Feld testFeld = brett.getFeld(3, 4);
+        Assert.assertEquals(FeldZustand.WASSER, testFeld.getZustand());
+    }
+
+    @Test
     public void testSchussWasser() throws FeldNichtAufBrettException, FeldBereitsBeschossenExcpetion {
         Spielbrett brett = new Spielbrett();
         brett.init(10, 10);
