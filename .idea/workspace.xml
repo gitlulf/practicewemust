@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2ffafc0a-ff6d-41bc-bcc5-0ea7fe0daf4e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/roemischezahlen/Translator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/Spielbrett.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/Spielbrett.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/Spielcontroller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/lulf/practicewmust/schiffeversenken/Spielcontroller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/schiffeversenken/TestSpielBrett.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/schiffeversenken/TestSpielBrett.java" afterDir="false" />
-    </list>
+    <list default="true" id="2ffafc0a-ff6d-41bc-bcc5-0ea7fe0daf4e" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,7 +173,7 @@
       <workItem from="1573071954960" duration="4451000" />
       <workItem from="1573243661384" duration="10062000" />
       <workItem from="1573312857423" duration="2233000" />
-      <workItem from="1573490805942" duration="3208000" />
+      <workItem from="1573490805942" duration="3241000" />
     </task>
     <task id="LOCAL-00001" summary="HelloWorld">
       <created>1572470603108</created>
@@ -216,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573254739038</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Debugging schiffeversenken.">
+      <created>1573494691023</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1573494691023</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -241,7 +242,8 @@
     <MESSAGE value="Spielbrett: processSchuss und String Repräsentationen" />
     <MESSAGE value="SpielController: Initialisierung erster Teil" />
     <MESSAGE value="Erste lauffähige Version." />
-    <option name="LAST_COMMIT_MESSAGE" value="Erste lauffähige Version." />
+    <MESSAGE value="Debugging schiffeversenken." />
+    <option name="LAST_COMMIT_MESSAGE" value="Debugging schiffeversenken." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
