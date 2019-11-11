@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2ffafc0a-ff6d-41bc-bcc5-0ea7fe0daf4e" name="Default Changelist" comment="" />
+    <list default="true" id="2ffafc0a-ff6d-41bc-bcc5-0ea7fe0daf4e" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +70,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Spielcontroller">
+  <component name="RunManager" selected="JUnit.de.lulf.practicewemust in practicewemust">
     <configuration name="Spielcontroller" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="de.lulf.practicewmust.schiffeversenken.Spielcontroller" />
       <module name="practicewemust" />
@@ -129,29 +131,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestSpielBrett.testToStringCovered" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="de.lulf.practicewemust in practicewemust" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="practicewemust" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="schiffeversenken.*" />
+          <option name="PATTERN" value="de.lulf.practicewemust.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="schiffeversenken" />
-      <option name="MAIN_CLASS_NAME" value="schiffeversenken.TestSpielBrett" />
-      <option name="METHOD_NAME" value="testToStringCovered" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="de.lulf.practicewemust" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.de.lulf.practicewemust in practicewemust" />
         <item itemvalue="Application.Spielcontroller" />
         <item itemvalue="JUnit.TestSpielBrett.testSchSchiffeUeberlappenSichSetzenFailed" />
         <item itemvalue="JUnit.TestSpielBrett" />
         <item itemvalue="JUnit.TestSpielBrett.testSchSchiffeUeberlappenSich" />
-        <item itemvalue="JUnit.TestSpielBrett.testToStringCovered" />
       </list>
     </recent_temporary>
   </component>
@@ -174,6 +174,7 @@
       <workItem from="1573243661384" duration="10062000" />
       <workItem from="1573312857423" duration="2233000" />
       <workItem from="1573490805942" duration="3241000" />
+      <workItem from="1573494769930" duration="265000" />
     </task>
     <task id="LOCAL-00001" summary="HelloWorld">
       <created>1572470603108</created>
@@ -217,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573494691023</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Refactor packages.">
+      <created>1573494817800</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1573494817800</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -243,7 +251,8 @@
     <MESSAGE value="SpielController: Initialisierung erster Teil" />
     <MESSAGE value="Erste lauffähige Version." />
     <MESSAGE value="Debugging schiffeversenken." />
-    <option name="LAST_COMMIT_MESSAGE" value="Debugging schiffeversenken." />
+    <MESSAGE value="Refactor packages." />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactor packages." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
