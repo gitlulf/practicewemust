@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ffafc0a-ff6d-41bc-bcc5-0ea7fe0daf4e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/de/lulf/practicewemust/roemischezahlen/UebersetzerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/de/lulf/practicewemust/roemischezahlen/UebersetzerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/de/lulf/practicewemust/roemischezahlen/UebersetzerTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,7 +80,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.UebersetzerTest.test999">
+  <component name="RunManager" selected="JUnit.UebersetzerTest">
     <configuration name="UebersetzerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="practicewemust" />
       <extension name="coverage">
@@ -92,22 +92,6 @@
       <option name="PACKAGE_NAME" value="de.lulf.practicewemust.roemischezahlen" />
       <option name="MAIN_CLASS_NAME" value="de.lulf.practicewemust.roemischezahlen.UebersetzerTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UebersetzerTest.test4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="practicewemust" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="de.lulf.practicewemust.roemischezahlen.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="de.lulf.practicewemust.roemischezahlen" />
-      <option name="MAIN_CLASS_NAME" value="de.lulf.practicewemust.roemischezahlen.UebersetzerTest" />
-      <option name="METHOD_NAME" value="test4" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -144,6 +128,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UebersetzerTest.testIllegalArgumentNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="practicewemust" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.lulf.practicewemust.roemischezahlen.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.lulf.practicewemust.roemischezahlen" />
+      <option name="MAIN_CLASS_NAME" value="de.lulf.practicewemust.roemischezahlen.UebersetzerTest" />
+      <option name="METHOD_NAME" value="testIllegalArgumentNull" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UebersetzerTest.testMinusKleiner1ProzentNotAllowed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="practicewemust" />
       <extension name="coverage">
@@ -162,11 +162,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.UebersetzerTest.test999" />
         <item itemvalue="JUnit.UebersetzerTest" />
+        <item itemvalue="JUnit.UebersetzerTest.test999" />
+        <item itemvalue="JUnit.UebersetzerTest.testIllegalArgumentNull" />
         <item itemvalue="JUnit.UebersetzerTest.testEinfacheZahl" />
         <item itemvalue="JUnit.UebersetzerTest.testMinusKleiner1ProzentNotAllowed" />
-        <item itemvalue="JUnit.UebersetzerTest.test4" />
       </list>
     </recent_temporary>
   </component>
@@ -191,7 +191,8 @@
       <workItem from="1573490805942" duration="3241000" />
       <workItem from="1573494769930" duration="1019000" />
       <workItem from="1573506225332" duration="774000" />
-      <workItem from="1573907543725" duration="7947000" />
+      <workItem from="1573907543725" duration="7988000" />
+      <workItem from="1574195413783" duration="1382000" />
     </task>
     <task id="LOCAL-00001" summary="HelloWorld">
       <created>1572470603108</created>
@@ -249,7 +250,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573495075251</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="übersetzer fertig, Tests noch nicht durch Felix final">
+      <created>1573934824300</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1573934824300</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -277,7 +285,8 @@
     <MESSAGE value="Debugging schiffeversenken." />
     <MESSAGE value="Refactor packages." />
     <MESSAGE value="Refactor packages abgeschlossen, Fix setzeSchiff." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor packages abgeschlossen, Fix setzeSchiff." />
+    <MESSAGE value="übersetzer fertig, Tests noch nicht durch Felix final" />
+    <option name="LAST_COMMIT_MESSAGE" value="übersetzer fertig, Tests noch nicht durch Felix final" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

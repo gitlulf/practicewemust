@@ -50,7 +50,7 @@ public class UebersetzerTest {
     @Test
     public void test999() {
         Uebersetzer q = new Uebersetzer();
-        Assert.assertEquals(999,q.uebersetzeRoemischeZahl(""));
+        Assert.assertEquals(999,q.uebersetzeRoemischeZahl("CMXCIX"));
     }
 
     @Test
